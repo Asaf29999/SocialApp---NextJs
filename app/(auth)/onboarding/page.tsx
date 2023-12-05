@@ -19,14 +19,14 @@ async function Page() {
     //     username: userInfo ? userInfo?.username : user.username,
     //     name: userInfo ? userInfo?.name : user.firstName ?? "",
     //     bio: userInfo ? userInfo?.bio : "",
-    //     image: userInfo ? userInfo?.image : user.imageUrl,
+    //     image: '',
     // }; 
     const userData = {
-        id: '1',
-        objectId: '1',
-        username: 'aaaaaa',
-        name: "aaaaaa",
-        bio:"aaaaaaaaaaaaaaaaaaaaaaaaaa",
+        id: '2',
+        objectId: '2',
+        username: '',
+        name: "",
+        bio:"",
         image: '',
     };
 
