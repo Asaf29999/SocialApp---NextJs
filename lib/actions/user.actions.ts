@@ -49,16 +49,16 @@ export async function fetchUser(userId: string) {
     connectToDB();
 
 
-    const x = await User.findOne({ id: userId });
-    console.log(x.onboarded);
+    const dbUser = await User.findOne({ id: userId });
+    // console.log(dbUser.onboarded);
 
-    return x
+    return dbUser;
     // .populate({
     //   path: 'communites',
     //   model: Community
     // });
   } catch (error: any) {
-    throw new Error(`faild to fetch user :${error.message}`)
+     throw new Error(`faild to fetch user :${error.message}`)
   }
 
 }
