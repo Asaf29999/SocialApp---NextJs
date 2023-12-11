@@ -17,6 +17,7 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Textarea } from "@/components/ui/textarea";
 import { ThreadValidation } from "@/lib/validations/thread";
+import { createThread } from "@/lib/actions/thread.actions";
 
 
 // import { updateUser } from "@/lib/actions/user.actions";
@@ -47,8 +48,14 @@ function PostThread({ userId }: { userId: string }) {
         },
     });
 
-    const onSubmit = () => { 
-        // await createThread()
+    const onSubmit = async (values: z.infer<typeof ThreadValidation>) => {
+        await createThread({
+            text: values.thread,
+            author: userId,
+            communityId: null,
+            path: pathname
+        });
+        router.push("/")
     }
     return (
         <Form {...form}>
