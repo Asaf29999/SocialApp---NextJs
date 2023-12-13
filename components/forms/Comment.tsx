@@ -65,7 +65,8 @@ const Comment = ({ threadId, currentUserImage, currentUserId }: Props) => {
                                 <Image src={currentUserImage} alt="currentUserImage"
                                     width={48}
                                     height={48}
-                                    className="rounded-full object-cover" />
+                                    className="rounded-full 
+                                    object-cover" />
                             </FormLabel>
                             <FormControl className='border-none bg-transparent'>
                                 <Input
